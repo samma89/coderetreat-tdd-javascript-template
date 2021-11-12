@@ -2,12 +2,18 @@
   "name": "tdd-starter-template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "!**/__tests__/**/*"
+  ],
   "scripts": {
-    "clean": "rm -rf build coverage",
+    "clean": "rm -rf build dist coverage",
     "test": "jest",
     "test:watch": "npm run jest -- --watch",
-    "watch": "nodemon"
+    "watch": "nodemon",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +21,11 @@
   "dependencies": {
     "jest": "^27.3.1",
     "nodemon": "^2.0.15",
-    "ts-jest": "^27.0.7"
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2"
   }
 }
